@@ -9,6 +9,7 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
+from azureml.core import Dataset
 
 def clean_data(data):
     # Dict for cleaning data
@@ -52,16 +53,13 @@ def main():
     run.log("Max iterations:", np.int(args.max_iter))
 
     # TODO: Create TabularDataset using TabularDatasetFactory
-    # Data is located at:
-    # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-
-    ds = ### YOUR CODE HERE ###
+    file_path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+    ds = Dataset.Tabular.from_delimited_files(path=file_path)
     
     x, y = clean_data(ds)
 
     # TODO: Split data into train and test sets.
-
-    ### YOUR CODE HERE ###a
+    x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
