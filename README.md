@@ -68,12 +68,12 @@ If Ensemble was not used, the best model would be "StandardScalerWrapper XGBoost
 6. We noticed that there is class imbalance in the dataset. By using over-sampling techniques on the minority class, we can bring about class balance, and this could potentially improve model performance. 
 7. Perform additional data processing such as normalisation, standardisation etc. as required
 8. It might help to store the data permanently in our Datastore. Currently, we are directly bringing the data from the remote URL to our notebook. In future:
-
 => if the data changes in the remote URL, the results would vary. We need to be able to associate model performance with the corresponding data that was used. 
-
 => Also, if the URL does not work in future, it becomes problematic. 
 
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
+
+Cluster clean up is handled in the code. 
