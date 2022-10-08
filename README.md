@@ -13,11 +13,11 @@ This model is then compared to an Azure AutoML run.
 
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+**Problem statement:**
 
 The dataset contains information from a bank marketing campaign. The problem is a binary classification problem where we need to predict whether the client subscribed for a term deposit(y) or not(n). The target column is represented by 'y' in the given dataset.  Source of information: UCI ML Repository
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+**Solution:**
 
 The best performing model was a VotingEnsemble model trained by the AutoML feature of AzureML. It had accuracy of 91.7%.
 
