@@ -4,7 +4,7 @@
 This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
-<img src="images/project_steps.png" width="1000" height="1000" >
+<img src="images/project_steps.png" width="1000" height="600" >
 
 ## Useful Resources
 - [ScriptRunConfig Class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.scriptrunconfig?view=azure-ml-py)
