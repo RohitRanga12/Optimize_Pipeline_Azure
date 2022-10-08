@@ -73,14 +73,16 @@ If Ensemble was not used, the best model would be "StandardScalerWrapper XGBoost
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
-1. Add additional parameters to AutoMLConfig
-2. Give more choices for the hyper-parameters inside RandomParameterSampling, i.e. for C and max_iter
-3. Try other Parameter Sampling techniques in Hyperdrive
-4. Try other Early Stopping policies in Hyperdrive
-5. Train Deep Learning models instead of Logistic Regression, they are capable of improving accuracy further. Also include deep learning models in the AutoML feature
-6. We noticed that there is class imbalance in the dataset. By using over-sampling techniques on the minority class, we can bring about class balance, and this could potentially improve model performance. 
-7. Perform additional data processing such as normalisation, standardisation etc. as required
-8. It might help to store the data permanently in our Datastore. Currently, we are directly bringing the data from the remote URL to our notebook. In future:
+- Add more data to the model
+- Add more columns/features with/without existing ones with feature engineering. Apply domain knowledge
+- Add additional parameters to AutoMLConfig
+- Give more choices for the hyper-parameters inside RandomParameterSampling, i.e. for C and max_iter
+- Try other Parameter Sampling techniques in Hyperdrive
+- Try other Early Stopping policies in Hyperdrive
+- Train Deep Learning models instead of Logistic Regression, they are capable of improving accuracy further. Also include deep learning models in the AutoML feature
+- We noticed that there is class imbalance in the dataset. By using over-sampling techniques on the minority class, we can bring about class balance, and this could potentially improve model performance. 
+- Perform additional data processing such as normalisation, standardisation etc. as required
+- It might help to store the data permanently in our Datastore. Currently, we are directly bringing the data from the remote URL to our notebook. In future:
 
             => if the data changes in the remote URL, the results would vary. We need to be able to associate model performance with the corresponding data that was used. 
 
